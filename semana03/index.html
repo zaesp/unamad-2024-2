@@ -16,6 +16,7 @@
                 <li>Procesos</li>
                 <li>Galeria</li>
                 <li>Intranet</li>
+                <li>Contacto</li>
             </ul>
         </nav>
     </header>
@@ -39,10 +40,7 @@
                 Resposabilidad Social
             </h2>
             <div>
-                <img src="/semana03/assests/imagen2.jpg" 
-                    height="183"
-                    width="275"
-                    alt="Responsabilidad">
+                <img src="/semana03/assests/imagen2.jpg" height="183" width="275" alt="Responsabilidad">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dolorem sint, nobis cum distinctio
                     quas quaerat molestiae, voluptates dolores, temporibus impedit fugit earum praesentium officia
@@ -50,8 +48,88 @@
                 </p>
             </div>
         </section>
-    </main>
+        <section>
+            <h2>Contactanos</h2>
+            <div>
+                <img src="/semana03/assests/iamgen3.jpg" alt="" height="50" width="50">
+            </div>
 
+            <form action="">
+                <p>
+                    <label for="">Registro</label><br>
+                    <label for="">
+                        <input type="radio" name="title" value="Sr.">
+                        Sr.
+                    </label>
+                    <label for="">
+                        <input type="radio" name="title" value="sra.">
+                        Sra.
+                    </label>
+                    <label for="">
+                        <input type="radio" name="title" value="Srta.">
+                        Srta.
+                    </label>
+                </p>
+
+                <p>
+                    <label for="">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" title="Solo letras permitidas" required>
+                </p>
+
+                <p>
+                    <label for="">Apellidos:</label><br>
+                    <input type="text" id="Apellido" name="nombre" title="Solo letras permitidas" required>
+                </p>
+
+                <p>
+                    <label for="">Email:</label><br>
+                    <input type="email" name="email" placeholder="ejemplo@unamad.edu.pe" required>
+                </p>
+
+                <p>
+                    <label for="">address:</label><br>
+                    <input type="text" name="apellidos" required>
+                </p>
+
+                <p>
+                    <label for="">Telefone:</label><br>
+                    <input type="number" name="telefono" required>
+                </p>
+                <p>
+                    <label for="">Regiones</label>
+                    <select>
+                        <optgroup>
+                            <option>Madre de Dios</option>
+                            <option>Cusco</option>
+                            <option>Arequipa</option>
+                            <option>Puno</option>
+                            <option>Apurimac</option>
+                            <option selected="true">Ucayali</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpiar</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <script>
+        function validarSoloLetras(event) {
+            var input = event.target;
+            var value = input.value;
+            var regex = /^[A-Za-z]*$/;
+
+            if (!regex.test(value)) {
+                input.value = value.replace(/[^A-Za-z]/g, '');
+            }
+        }
+
+        document.getElementById('nombre').addEventListener('input', validarSoloLetras);
+        document.getElementById('Apellido').addEventListener('input', validarSoloLetras);
+
+    </script>
 
 </body>
 
