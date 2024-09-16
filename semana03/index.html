@@ -73,12 +73,12 @@
 
                 <p>
                     <label for="">Nombre:</label><br>
-                    <input type="text" id="nombre" name="nombre" title="Solo letras permitidas" required>
+                    <input type="text" id="nombre" name="nombre" title="Solo letras permitidas" pattern="[A-Za-z]+" required>
                 </p>
 
                 <p>
                     <label for="">Apellidos:</label><br>
-                    <input type="text" id="Apellido" name="nombre" title="Solo letras permitidas" required>
+                    <input type="text" id="Apellido" name="nombre" title="Solo letras permitidas" pattern="[A-Za-z]+"required>
                 </p>
 
                 <p>
@@ -113,7 +113,46 @@
                     <button type="reset">Limpiar</button>
                 </p>
             </form>
+            <div>
+                <table>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Escuela profesional</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jose</td>
+                            <td>Perez</td>
+                            <td>Ing Sistemas e Informatica</td>
+                            <td rowspan="2">Masculino</td>
+                        </tr>
+                        <tr>
+                            <td>Elias</td>
+                            <td>Huanab</td>
+                            <td>Ing Sistemas e Informatica</td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Marisol</td>
+                            <td>Pastor</td>
+                            <td>Enfermeria</td>
+                            <td rowspan="2">Femenino</td>
+                        </tr>
+                        <tr>
+                            <td>Cielo</td>
+                            <td>Silva</td>
+                            <td>Ing. Forestal</td>
+                            
+                        </tr>
+                    </tbody>
+
+                </table>                
+            </div>
+
+
         </section>
+        
     </main>
     <script>
         function validarSoloLetras(event) {
@@ -126,8 +165,8 @@
             }
         }
 
-        document.getElementById('nombre').addEventListener('input', validarSoloLetras);
-        document.getElementById('Apellido').addEventListener('input', validarSoloLetras);
+        //document.getElementById('nombre').addEventListener('input', validarSoloLetras);
+        //document.getElementById('Apellido').addEventListener('input', validarSoloLetras);
 
     </script>
 
